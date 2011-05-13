@@ -32,8 +32,8 @@ set xp=false
     echo Using linkname: "%link_name%"
 
 :main
-    REM Check if target is a directory by checking for the existence of the NUL file in said directory
-    if EXIST %target%\NUL (
+    REM Check if target is a directory 
+    if EXIST %target%\ (
 	goto :link_directory
     ) else (
         goto :link_file
